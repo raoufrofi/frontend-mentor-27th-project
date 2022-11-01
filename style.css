@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap");
+
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-size: 15px;
+}
+
+/* ----------------------
+HEADER
+-------------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.header img {
+  width: calc(3rem + 3vw);
+  height: 100%;
+}
+
+.navmenu ul li a {
+  color: var(--almost-black);
+}
+
+.navmenu ul .expand-able {
+  display: flex;
+  align-items: center;
+}
+
+.navmenu ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+.feature-list,
+.company-list {
+  padding-left: 1rem;
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s;
+}
+
+.feature-list.show,
+.company-list.show {
+  height: fit-content;
+  opacity: 1;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-list li img {
+  width: 1rem;
+}
+
+.navbar {
+  display: none;
+  align-items: center;
+}
+
+.navbar.mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: end;
+  animation: opacityChanger 1s forwards;
+}
+
+@keyframes opacityChanger {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar.mobile .navmenu {
+  width: min(80%, 300px);
+  background-color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.navbar.mobile .navmenu ul > * {
+  margin: 0.8rem 0;
+}
+
+.navbar.mobile .close-btn {
+  display: block;
+}
+
+.btn {
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--almost-black);
+  width: min(200px, 90%);
+}
+
+.btn a {
+  display: inline-block;
+}
+
+/* ----------------------
+HEADER-DESKTOP
+-------------------------*/
+
+.navbar.desktop {
+  display: flex;
+  /* background-color: orange; */
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.navbar.desktop .navmenu {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.navbar.desktop .navmenu > * {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar.desktop + .open-btn {
+  display: none;
+}
+
+.navbar.desktop .close-btn {
+  display: none;
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+}
+
+.navbar.desktop .navmenu .company-list,
+.navbar.desktop .navmenu .feature-list {
+  position: absolute;
+  top: 2.25rem;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  border-radius: 5px;
+  padding: 1rem 3rem 1rem 1rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0 0px 7px rgb(145, 145, 145);
+  width: max-content;
+}
+
+/*---------------------------
+MAIN
+---------------------------*/
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main__left {
+  text-align: center;
+  padding-block: 2em;
+  padding-inline: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main__para {
+  font-size: calc(0.75rem + 0.5vw);
+  line-height: 1.25;
+}
+
+.main__heading {
+  font-weight: 900;
+  font-size: calc(2rem + 3vw);
+}
+
+.main__btn {
+  width: fit-content;
+  padding-block: 1em;
+  padding-inline: 2em;
+  font-size: calc(0.75rem + 0.25vw);
+  color: var(--almost-white);
+  background-color: var(--almost-black);
+  border-radius: 10px;
+  margin: auto;
+  font-weight: bold;
+  border: 1px solid var(--almost-black);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.main__btn:hover {
+  background-color: transparent;
+  color: var(--almost-black);
+}
+
+.main__brands {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+.main img {
+  width: 100%;
+}
+
+.main.desktop {
+  flex-direction: row;
+  padding: 2rem 5rem;
+  gap: 2rem;
+  align-items: center;
+  width: min(90%, 1440px);
+  margin: auto;
+}
+
+.main.desktop .main__left {
+  text-align: left;
+}
+
+.main.desktop .main__btn {
+  margin: unset;
+}

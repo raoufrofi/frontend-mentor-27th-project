@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header class="header desktop">
+      <img src="images/logo.svg" alt="Logo" />
+      <div class="navbar desktop">
+        <nav class="navmenu">
+          <span class="material-symbols-outlined close-btn"> close </span>
+          <ul>
+            <li>
+              <div class="expand-able">
+                <a href="#">Features</a>
+                <span class="material-symbols-outlined"> expand_more</span>
+              </div>
+              <ul class="feature-list">
+                <li>
+                  <img src="images/icon-todo.svg" width="" alt="" />
+                  <a href="#">Todo List</a>
+                </li>
+                <li>
+                  <img src="images/icon-calendar.svg" width="" alt="" />
+                  <a href="#">Calender</a>
+                </li>
+                <li>
+                  <img src="images/icon-reminders.svg" width="" alt="" />
+                  <a href="#">Reminder</a>
+                </li>
+                <li>
+                  <img src="images/icon-planning.svg" width="" alt="" />
+                  <a href="#">Planning</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="expand-able">
+                <a href="#">Company</a>
+                <span class="material-symbols-outlined">expand_more </span>
+              </div>
+              <ul class="company-list">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Login</a></li>
+            <li class="btn"><a href="#">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+      <span class="material-symbols-outlined open-btn"> menu </span>
+    </header>
+
+    <main class="main">
+      <article class="main__left">
+        <h1 class="main__heading">Make remote work</h1>
+        <p class="main__para">
+          Get your team in sync, no matter your location. Streamline processes, create
+          team rituals, and watch productivity soar.
+        </p>
+        <button class="main__btn">Learn more</button>
+        <ul class="main__brands">
+          <li><img src="images/client-audiophile.svg" alt="" /></li>
+          <li><img src="images/client-databiz.svg" alt="" /></li>
+          <li><img src="images/client-meet.svg" alt="" /></li>
+          <li><img src="images/client-maker.svg" alt="" /></li>
+        </ul>
+      </article>
+      <aside class="main__right">
+        <img id="heroImg" src="images/image-hero-mobile.png" alt="" />
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
